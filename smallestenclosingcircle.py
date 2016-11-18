@@ -19,6 +19,7 @@
 #
 
 import math, random
+from collections import namedtuple
 
 
 # Data conventions: A point is a pair of floats (x, y). A circle is a triple of floats (center x, center y, radius).
@@ -29,7 +30,7 @@ import math, random
 # Output: A triple of floats representing a circle.
 # Note: If 0 points are given, None is returned. If 1 point is given, a circle of radius 0 is returned.
 #
-def make_circle(points):
+def make_smallest_circle(points):
     # Convert to float and randomize order
     shuffled = [(float(p[0]), float(p[1])) for p in points]
     random.shuffle(shuffled)
@@ -39,7 +40,9 @@ def make_circle(points):
     for (i, p) in enumerate(shuffled):
         if c is None or not _is_in_circle(c, p):
             c = _make_circle_one_point(shuffled[0 : i + 1], p)
-    return c
+
+    if c is None: return None
+    return namedtuple('Circle', ('x', 'y', 'radius'))(*c)
 
 
 # One boundary point known
