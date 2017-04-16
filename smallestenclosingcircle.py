@@ -1,23 +1,3 @@
-# Smallest enclosing circle
-#
-# Copyright (c) 2014 Project Nayuki
-# https://www.nayuki.io/page/smallest-enclosing-circle
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program (see COPYING.txt).
-# If not, see <http://www.gnu.org/licenses/>.
-#
-
 import math, random
 from collections import namedtuple
 
@@ -27,7 +7,7 @@ from collections import namedtuple
 #
 # Returns the smallest circle that encloses all the given points. Runs in expected O(n) time, randomized.
 # Input: A sequence of pairs of floats or ints, e.g. [(0,5), (3.1,-2.7)].
-# Output: A triple of floats representing a circle.
+# Output: A tuple of floats representing a circle.
 # Note: If 0 points are given, None is returned. If 1 point is given, a circle of radius 0 is returned.
 #
 def make_smallest_circle(points):
