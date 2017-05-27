@@ -9,3 +9,10 @@
 **Data conventions**:  
 - point is a pair of floats (x, y).  
 - circle is a namedtuple of floats (x, y, radius).  
+
+### Install
+```shell
+pip install git+git://github.com/BebeSparkelSparkel/SmallestEnclosingCircle.git@master
+pip3 install git+git://github.com/BebeSparkelSparkel/SmallestEnclosingCircle.git@master
+pip3.5 install git+git://github.com/BebeSparkelSparkel/SmallestEnclosingCircle.git@master
+```
